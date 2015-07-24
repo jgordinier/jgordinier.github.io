@@ -1,11 +1,12 @@
 body {
 	background: black url(../images/background_600.png) top left no-repeat;
 	color:white;
+	cursor:url("../images/skateboard_trans.png"), default;
 }
 .content {
 	margin: 0 auto;
 	display:block;
-	width:600px;
+	width:650px;
 }
 
 header {

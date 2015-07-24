@@ -12,7 +12,7 @@ table td, table td * {
 	vertical-align:top;
 	width:250px;
 	padding:5px;
-	border-right:solid #a2d947 5px;
+	font-family:arial;
 }
 
 header {

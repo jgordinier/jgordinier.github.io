@@ -8,6 +8,12 @@ body {
 	display:block;
 	width:650px;
 }
+table td, table td * {
+	vertical-align:top;
+	width:250px;
+	padding:5px;
+	border-right:solid #a2d947 5px;
+}
 
 header {
 	width:100%;

@@ -1,4 +1,51 @@
 body {
-	background: black url(./images/background.png) top left;
+	background: black url(../images/background_600.png) top left no-repeat;
+	color:white;
 }
+.content {
+	margin: 0 auto;
+	display:block;
+	width:600px;
+}
+
+header {
+	width:100%;
+}
+header img{
+	margin: 0 auto;
+	display:block;
+}
+nav {
+	height:20px;
+	width:600px;
+}
+nav ul {
+	display:block;
+	width:100%;
+	margin:0 auto;
+	list-style-type:none;
+	font-size: 1.1em;
+}
+nav ul li {
+	margin:.9em;
+	float:left;
+}
+nav ul li a{
+	text-decoration: none;
+	color:white;
+	text-transform:uppercase;
+
+}
+nav ul li a:hover{
+	color:#c0c0c0;
+}
+section {
+	clear:both;
+}
+article {
+	clear:both;
+}
+
+
+
 

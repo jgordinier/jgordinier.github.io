@@ -7,6 +7,55 @@
 	<link rel="stylesheet" href="styles/print.css">
 	<link rel="stylesheet" href="styles/mobile.css">
 	<script src="script.js" type="javascript"></script>
+<style>
+html, body, #map-canvas {
+height: 100%;
+margin: 0;
+padding: 0;
+}
+
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLRRIg3EvlO3QQmrRAI1cX11bulgxCKNY"></script>
+<script>
+// This example displays a marker at the center of Australia.
+// When the user clicks the marker, an info window opens.
+
+function initialize() {
+var myLatlng = new google.maps.LatLng(33.99083,-118.45917);
+var mapOptions = {
+zoom: 4,
+center: myLatlng
+};
+
+var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+var contentString ='<div id="content">'+
+'<div id="siteNotice">'+
+'</div>'+
+'<h1 id="firstHeading" class="firstHeading">Pacific Ocean Pier </h1>'+
+'<div id="bodyContent">'+
+'<p>In 1965, Santa Monica really began its Ocean Park urban renewal project. Buildings in the surrounding area were demolished and streets leading to the park were closed. As a result, visitors found it hard to reach the park and attendance plummeted to 621,000 in 1965 and 398,700 in 1966.</p>'+
+'<p>At the end of the 1967 tourist season, the parks creditors and the City of Santa Monica filed suit to take control of the property because of back taxes and back rent owed by the parks new owner since 1965. Pacific Ocean Park closed on October 6, 1967. The parks assets were auctioned off June 28 through June 30, 1968. The proceeds from the sale of thirty-six rides and sixteen games were used to pay off creditors. The ruins of the pier became a favorite surfing area and hangout of the Z-Boys of Dogtown fame. The parks dilapidated buildings and pier structure remained until several suspicious fires occurred and it was finally demolished in the winter of 1974-75.</p>'+
+'</div>'+
+'</div>';
+
+var infowindow = new google.maps.InfoWindow({
+content: contentString
+});
+
+var marker = new google.maps.Marker({
+position: myLatlng,
+map: map,
+title: 'Pacific Ocean Pier'
+});
+google.maps.event.addListener(marker, 'click', function() {
+infowindow.open(map,marker);
+});
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
 </head>
 <body>
 <div class="content">
@@ -17,47 +66,16 @@
 <nav>
 	<ul>
 		<li class="navi"><a href="index.htm">Home</a></li>
-		<li class="navi"><a href="page1.htm">Page1</a></li>
-		<li class="navi"><a href="page2.htm">Page2</a></li>
-		<li class="navi"><a href="page3.htm">Page3</a></li>
-		<li class="navi"><a href="page4.htm">Page4</a></li>
+		<li class="navi"><a href="page1.htm">Members</a></li>
+		<li class="navi"><a href="page2.htm">Trailer</a></li>
+		<li class="navi"><a href="page3.htm">Contact Us</a></li>
+		<li class="navi"><a href="page4.htm">Map</a></li>
 	</ul>
 
 </nav>
 <section>
 	<article>
-	<img style="float:left;margin-right:5px;padding:10px" src="./images/poster.jpg" alt="DogTown Poster" height="300px">
-	<p><a class="link" href="http://www.imdb.com/title/tt0275309/">Dogtown and Z-Boys</a>&nbsp;&#169; is an award winning 2001 documentary film directed by Stacy Peralta.</p><p> The documentary explores the pioneering of the Zephyr skateboard team in the 1970s (of which Peralta was a member) and the evolving sport of skateboarding.</p></p> Using a mix of film that the Zephyr skateboard team (Z-Boys) shot in the 1970s by Craig Stecyk along with contemporary interviews, the documentary tells the story of a group of teenage surfer/skateboarders and their influence on the history of skateboarding (and to a lesser extent surfing) culture.</p>
-</article>
-
-<article>
-
-	<h1>Z-Boys</h1>
-	<p><img src="./images/zephyr_team.jpg" alt="Zephyr Team">
-	<h4>Zephyr Competition Team</h4>
-	<p>The <em>Zephyr Competition Team</em> (or Z-Boys) was a group of skateboarders in the mid-1970s from Santa Monica and Venice, California. The aerial and sliding skate moves that the Z-Boys invented were the basis for aerial skateboarding today.</p>
-	<aside>
-	<div style="float:right;width:450px;margin-left:10px;font-family:arial;font-size:.8em;color:#a2d947;">
-<img src="./images/carving.gif" alt="carving" width="400px"/>	<p>The Zephyr team was especially influential for bringing moves from surfing over to skateboarding. Keeping a low center of graivity and moving your hand across the wave were radical new techniques only possible because of new surfboard technologies and only practiced by a handfull of surfers. Seeing them done on skateboards may seem like a logical extension but prior to the 1970s skateboarding was closer to roller skating than surfing.</p>
-</div>
-</aside>
-	<p>The crew, who began as a surf team, derived their name from the Zephyr surfboard shop in Santa Monica. Jeff Ho, Skip Engblom and Craig Stecyk opened the Santa Monica shop as Jeff Ho Surfboards and Zephyr Productions in 1971. The Z-Boys represented the shop in surf competitions, with the first member being fourteen-year-old Nathan Pratt. Pratt also worked at the shop and became an apprentice surfboard maker over time.</p>
-
-	<p>In 1974, Allen Sarlo, Jay Adams, Tony Alva, Chris Cahill and Stacy Peralta, joined the surf team. The place that the team spent most of their time surfing was at Pacific Ocean Park, a once thriving amusement park atop a pier. </p>
-
-	<h2>Original Members</h2>
-	<ol><li>Allen Sarlo</li><li>Bob Biniak (June 2, 1958 - February 25, 2010)</li><li>Chris Cahill (December 5, 1956 - June 24, 2011)[3]</li><li>Jay Adams (February 3, 1961 - August 15, 2014)</li><li>Jim Muir</li><li>Nathan Pratt</li><li>Paul Constantineau</li><li>Peggy Oki</li><li>Shogo Kubo (September 19, 1959 - June 24, 2014)</li><li>Stacy Peralta</li><li>Tony Alva</li><li>Wentzle Ruml IV</li></li></ol>
-</article>
-
-<article>
-	<h2>Pacific Ocean Peir</h2>
-	<p><img src="./images/venice.jpg" alt="Pacific Ocean Pier " width="400px"></p>
-
-	<p>The ruins of what was envisioned as a Coney Island for the west coast and nicknamed <b>Dogtown</b> by the locals; Venice Beach served as a birthplace of some of the greatest skateboarders of all time.</p>
-
-	<p>Now abandoned and run down with large tilted, wood pilings jutting from the water, and not enough room for all of the surfers, Pacific Ocean Park Pier was an incredibly dangerous place to surf. Despite these dangers, the Z-Boys surfed it anyway. They would surf in the mornings, when the waves were the highest. When the pier waves died down after the early-morning hours, they would hang out at the Zephyr shop, running errands, doing homework, skating and flirting with passing girls. At that time, the Z-Boys saw skating as a hobby, something to do after surfing, but it quickly grew from a hobby into a new way to express themselves.</p>
-
-
+		<div id="map-canvas"></div>
 </article>
 
 

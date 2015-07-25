@@ -7,6 +7,11 @@
 	<link rel="stylesheet" href="styles/print.css">
 	<link rel="stylesheet" href="styles/mobile.css">
 	<script src="script.js" type="javascript"></script>
+	<style>
+body {
+	cursor:url("./images/skateboard_trans.png"), default;
+}
+	</style>
 </head>
 <body>
 <div class="content">
@@ -19,8 +24,8 @@
 		<li class="navi"><a href="index.htm">Home</a></li>
 		<li class="navi"><a href="page1.htm">Members</a></li>
 		<li class="navi"><a href="page2.htm">Trailer</a></li>
-		<li class="navi"><a href="page3.htm">Page3</a></li>
-		<li class="navi"><a href="page4.htm">Page4</a></li>
+		<li class="navi"><a href="page3.htm">Contact Us</a></li>
+		<li class="navi"><a href="page4.htm">Map</a></li>
 	</ul>
 
 </nav>

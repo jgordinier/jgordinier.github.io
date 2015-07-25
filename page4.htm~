@@ -1,40 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Dogtown</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta charset="utf-8">
+<title>Dogtown</title>
 	<link rel="stylesheet" href="./css/styles.css">
-	<link rel="stylesheet" href="styles/print.css">
-	<link rel="stylesheet" href="styles/mobile.css">
-	<script src="script.js" type="javascript"></script>
 <style>
 html, body, #map-canvas {
-height: 100%;
 margin: 0;
 padding: 0;
 }
+#map-canvas {
+	height:600px;
+}
+.firstHeading, #bodyContent{
+	color:black;
+}
 
 </style>
-<script src="https://maps.googleapis.com/maps/api/js?v=2&key=AIzaSyCjyTLX3o8d8Dr8M0MhL7n75-6YcnkWkNU&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
 <script>
 // This example displays a marker at the center of Australia.
 // When the user clicks the marker, an info window opens.
 
 function initialize() {
-var myLatlng = new google.maps.LatLng(33.99083,-118.45917);
+var pacOpier = new google.maps.LatLng(33.998,-118.482);
+var veniceBch = new google.maps.LatLng(33.985816,-118.4730327);
 var mapOptions = {
-zoom: 4,
-center: myLatlng
+zoom: 14,
+center: pacOpier
 };
 
 var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-var contentString ='<div id="content">'+
+var contentString = '<div id="content">'+
 '<div id="siteNotice">'+
 '</div>'+
-'<h1 id="firstHeading" class="firstHeading">Pacific Ocean Pier </h1>'+
+'<h1 id="firstHeading" class="firstHeading">Pacific Ocean Pier</h1>'+
 '<div id="bodyContent">'+
-'<p>In 1965, Santa Monica really began its Ocean Park urban renewal project. Buildings in the surrounding area were demolished and streets leading to the park were closed. As a result, visitors found it hard to reach the park and attendance plummeted to 621,000 in 1965 and 398,700 in 1966.</p>'+
+'<p>In 1965, Santa Monica really began its Ocean Park urban renewal project. Buildings in the surrounding area were demolished and streets leading to the park were closed[citation needed]. As a result, visitors found it hard to reach the park and attendance plummeted to 621,000 in 1965 and 398,700 in 1966.</p>'+
 '<p>At the end of the 1967 tourist season, the parks creditors and the City of Santa Monica filed suit to take control of the property because of back taxes and back rent owed by the parks new owner since 1965. Pacific Ocean Park closed on October 6, 1967. The parks assets were auctioned off June 28 through June 30, 1968. The proceeds from the sale of thirty-six rides and sixteen games were used to pay off creditors. The ruins of the pier became a favorite surfing area and hangout of the Z-Boys of Dogtown fame. The parks dilapidated buildings and pier structure remained until several suspicious fires occurred and it was finally demolished in the winter of 1974-75.</p>'+
 '</div>'+
 '</div>';
@@ -44,9 +48,17 @@ content: contentString
 });
 
 var marker = new google.maps.Marker({
-position: myLatlng,
+position: pacOpier,
 map: map,
 title: 'Pacific Ocean Pier'
+});
+google.maps.event.addListener(marker, 'click', function() {
+infowindow.open(map,marker);
+});
+var markera = new google.maps.Marker({
+position: veniceBch,
+map: map,
+title: 'Venice Beach'
 });
 google.maps.event.addListener(marker, 'click', function() {
 infowindow.open(map,marker);
@@ -54,10 +66,11 @@ infowindow.open(map,marker);
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
+google.maps.event.trigger(map, 'resize');
 </script>
 </head>
 <body>
+
 <div class="content">
 	<header>
 <img id="#top" src="./images/dogtown_logo.png" alt="header">
@@ -74,17 +87,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 </nav>
 <section>
+<form>
+<input type="radio" name="chgclr" 
+onClick="document.body.style.backgroundColor='red';" />
+Red<br />
+<input type="radio" name="chgclr" 
+onClick="document.body.style.backgroundColor='blue';" />
+Blue<br />
+<input type="radio" name="chgclr" 
+onClick="document.body.style.backgroundColor='yellow';" />
+Yellow<br />
+</form>
 	<article>
-		<div id="map-canvas"></div>
-</article>
-
-
+<div id="map-canvas"></div>
 </section>
-<footer>
-	<p><a href="mailto:jg@allmail.net">Contact Me</a>&nbsp;&middot;&nbsp; <a href="#top">Back to Top</a> </p>
-
-</footer>
+</article>
 </div>
-
 </body>
 </html>

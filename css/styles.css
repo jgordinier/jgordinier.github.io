@@ -8,6 +8,9 @@ body {
 	display:block;
 	width:650px;
 }
+.frm {
+	padding:10px;
+}
 table td, table td * {
 	vertical-align:top;
 	width:250px;

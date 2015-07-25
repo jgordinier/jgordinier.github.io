@@ -15,7 +15,7 @@ padding: 0;
 }
 
 </style>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLRRIg3EvlO3QQmrRAI1cX11bulgxCKNY"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMNuKdiyevFGGzWYopi8zL-E7ePmlj71U"></script>
 <script>
 // This example displays a marker at the center of Australia.
 // When the user clicks the marker, an info window opens.
